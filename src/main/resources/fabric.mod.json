@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "semblance",
+  "version": "${version}",
+
+  "name": "Semblance",
+  "description": "A server side mod used to rebrand your server.",
+  "authors": [
+    "EcoBuilder13"
+  ],
+  "contact": {
+    "homepage": "https://modrinth.com/mod/semblance",
+    "sources": "https://github.com/EcoBuilder13/Semblance",
+    "issues": "https://github.com/EcoBuilder13/Semblance/issues"
+  },
+
+  "license": "BSD",
+  "icon": "assets/semblance/icon.png",
+
+  "environment": "server",
+  "entrypoints": {
+    "main": [
+      "ga.mchorizons.semblance.Semblance"
+    ]
+  },
+  "mixins": [
+    "semblance.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.11.3",
+    "fabric": "*",
+    "minecraft": "1.17.x"
+  }
+}
