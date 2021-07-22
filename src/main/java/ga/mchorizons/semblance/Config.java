@@ -1,13 +1,57 @@
 package ga.mchorizons.semblance;
 
+import net.fabricmc.loader.api.FabricLoader;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.util.Properties;
+
 public class Config {
 
-    // Change the value of this string to change the server's brand
-    private static String brand = "TaterMC";
+    public static final Logger LOGGER = LogManager.getLogger("Semblance");
 
-    public static String getServerBrand(){
-        return brand;
+    public static void createConfig() {
+        try {
+            File config = new File(String.valueOf(FabricLoader.getInstance().getConfigDir().resolve("semblance.properties")));
+            if (config.createNewFile()) {
+                writeDefualt();
+            }
+        } catch (IOException e) {
+            LOGGER.warn("An error occurred while creating the config!");
+            e.printStackTrace();
+        }
     }
 
-    // TODO: Add proper config file
+    private static void writeDefualt() {
+        try {
+            FileWriter configWriter = new FileWriter(String.valueOf(FabricLoader.getInstance().getConfigDir().resolve("semblance.properties")));
+            configWriter.write("#Semblance Config\n");
+            configWriter.write("brand=TaterMC");
+            configWriter.close();
+        } catch (IOException e) {
+            LOGGER.warn("An error occurred while creating the config!");
+            e.printStackTrace();
+        }
+    }
+
+    public static String getServerBrand() {
+        Properties properties = new Properties();
+        String brand;
+        try {
+            properties.load(Files.newInputStream(FabricLoader.getInstance().getConfigDir().resolve("semblance.properties")));
+        } catch (IOException e) {
+            LOGGER.warn("An error occurred while reading the config!");
+            e.printStackTrace();
+        }
+        if (!properties.getProperty("brand").equals("vanilla") & !properties.getProperty("brand").equals("forge")) {
+            brand = properties.getProperty("brand");
+        } else {
+            LOGGER.warn("Server can't be rebranded to \"" + properties.getProperty("brand") + "\"");
+            throw new SecurityException("Server can't be rebranded to a valid name");
+        }
+        return brand;
+    }
 }
