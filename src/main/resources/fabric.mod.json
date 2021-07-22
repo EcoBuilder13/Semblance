@@ -15,7 +15,6 @@
   },
 
   "license": "BSD",
-  "icon": "assets/semblance/icon.png",
 
   "environment": "server",
   "entrypoints": {
