@@ -14,7 +14,7 @@ By default the server will be rebranded to `TaterMC`. To change this go to the c
 - Can you port to Forge?
 
     - No, read the [notice](https://modrinth.com/mod/dashloader).
-- Can you port to another verison?
+- Can you port to another version?
 
     - I will only port to newer versions of the game. All releases have their version limited to all minor releases of the current major version when released.
 - Why can't I rename my server to a valid name?
