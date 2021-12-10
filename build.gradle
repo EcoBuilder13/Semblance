@@ -11,7 +11,7 @@ version = project.mod_version
 group = project.maven_group
 
 repositories {
-	maven { url 'https://jitpack.io' }
+	maven { url 'https://api.modrinth.com/maven' }
 }
 
 dependencies {
@@ -24,7 +24,7 @@ dependencies {
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 	
 	//Lazy DFU
-	modImplementation 'com.github.astei:lazydfu:0.1.2'
+	modImplementation 'maven.modrinth:lazydfu:0.1.2'
 }
 
 processResources {
