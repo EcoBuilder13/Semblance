@@ -17,7 +17,7 @@ public class Config {
         try {
             File config = new File(String.valueOf(FabricLoader.getInstance().getConfigDir().resolve("semblance.properties")));
             if (config.createNewFile()) {
-                writeDefualt();
+                writeDefault();
             }
         } catch (IOException e) {
             LOGGER.warn("An error occurred while creating the config!");
@@ -25,7 +25,7 @@ public class Config {
         }
     }
 
-    private static void writeDefualt() {
+    private static void writeDefault() {
         try {
             FileWriter configWriter = new FileWriter(String.valueOf(FabricLoader.getInstance().getConfigDir().resolve("semblance.properties")));
             configWriter.write("#Semblance Config\n");
