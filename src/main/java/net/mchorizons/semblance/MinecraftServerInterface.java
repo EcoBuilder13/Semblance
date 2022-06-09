@@ -1,4 +1,4 @@
-package ga.mchorizons.semblance;
+package net.mchorizons.semblance;
 
 public interface MinecraftServerInterface {
     String getServerModName();

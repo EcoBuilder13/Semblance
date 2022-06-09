@@ -1,4 +1,4 @@
-package ga.mchorizons.semblance;
+package net.mchorizons.semblance;
 
 import net.fabricmc.loader.api.FabricLoader;
 import org.slf4j.LoggerFactory;

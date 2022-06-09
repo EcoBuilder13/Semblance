@@ -19,7 +19,7 @@
   "environment": "server",
   "entrypoints": {
     "main": [
-      "ga.mchorizons.semblance.Semblance"
+      "net.mchorizons.semblance.Semblance"
     ]
   },
   "mixins": [
