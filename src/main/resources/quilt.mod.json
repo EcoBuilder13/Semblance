@@ -15,17 +15,13 @@
 				"issues": "https://github.com/EcoBuilder13/Semblance/issues",
 				"sources": "https://github.com/EcoBuilder13/Semblance"
 			},
-			"license": "BSD"
+			"license": "BSD-3-Clause"
 		},
 		"intermediate_mappings": "net.fabricmc:intermediary",
 
 		"entrypoints": {
-			"init": "net.mchorizons.semblance.Semblance"
+			"main": "net.mchorizons.semblance.Semblance"
 		},
-
-		"environment": "server",
-
-		"mixin": "darkgraph.mixins.json",
 
 		"depends": [
 			{
@@ -34,12 +30,18 @@
 			},
 			{
 				"id": "quilt_loader",
-				"versions": ">=0.17.0-"
+				"versions": ">=0.16.0-"
 			},
 			{
 				"id": "quilted_fabric_api",
 				"versions": ">=2.0.0-"
 			}
 		]
+	},
+
+	"mixin": "semblance.mixins.json",
+
+	"minecraft": {
+		"environment": "dedicated_server"
 	}
 }

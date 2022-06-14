@@ -32,10 +32,14 @@ loom {
 }
 
 processResources {
-	inputs.property "version", project.version
+	inputs.property "mod_version", version
 
 	filesMatching("fabric.mod.json") {
-		expand "version": project.version
+		expand "version": version
+	}
+	
+	filesMatching('quilt.mod.json') {
+		expand "version": version
 	}
 }
 
