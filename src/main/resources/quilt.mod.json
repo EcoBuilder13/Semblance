@@ -31,10 +31,6 @@
 			{
 				"id": "quilt_loader",
 				"versions": ">=0.16.0-"
-			},
-			{
-				"id": "quilted_fabric_api",
-				"versions": ">=2.0.0-"
 			}
 		]
 	},
