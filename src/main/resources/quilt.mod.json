@@ -26,7 +26,7 @@
 		"depends": [
 			{
 				"id": "minecraft",
-				"versions": ">=1.19.x"
+				"versions": "1.19.x"
 			},
 			{
 				"id": "quilt_loader",
