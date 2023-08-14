@@ -29,7 +29,7 @@ public class Config {
         try {
             FileWriter configWriter = new FileWriter(String.valueOf(FabricLoader.getInstance().getConfigDir().resolve("semblance.properties")));
             configWriter.write("#Semblance Config\n");
-            configWriter.write("brand=TaterMC");
+            configWriter.write("brand=vanilla");
             configWriter.close();
         } catch (IOException e) {
             LOGGER.warn("An error occurred while creating the config!");
@@ -39,19 +39,12 @@ public class Config {
 
     public static String getServerBrand() {
         Properties properties = new Properties();
-        String brand;
         try {
             properties.load(Files.newInputStream(FabricLoader.getInstance().getConfigDir().resolve("semblance.properties")));
         } catch (IOException e) {
             LOGGER.warn("An error occurred while reading the config!");
             e.printStackTrace();
         }
-        if (!properties.getProperty("brand").equals("vanilla") & !properties.getProperty("brand").equals("forge")) {
-            brand = properties.getProperty("brand");
-        } else {
-            LOGGER.warn("Server can't be rebranded to \"" + properties.getProperty("brand") + "\"");
-            throw new SecurityException("Server can't be rebranded to a valid name");
-        }
-        return brand;
+        return properties.getProperty("brand");
     }
 }
