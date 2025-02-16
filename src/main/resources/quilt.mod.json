@@ -4,6 +4,20 @@
 		"group": "net.mchorizons",
 		"id": "semblance",
 		"version": "${version}",
+		"entrypoints": {
+			"main": "net.mchorizons.semblance.Semblance"
+		},
+		"depends": [
+			{
+				"id": "minecraft",
+				"versions": "1.21.x"
+			},
+			{
+				"id": "quilt_loader",
+				"versions": ">=0.26.0"
+			}
+		],
+		"intermediate_mappings": "net.fabricmc:intermediary",
 		"metadata": {
 			"name": "Semblance",
 			"description": "A server side mod used to rebrand your server.",
@@ -17,26 +31,8 @@
 			},
 			"license": "BSD-3-Clause"
 		},
-		"intermediate_mappings": "net.fabricmc:intermediary",
-
-		"entrypoints": {
-			"main": "net.mchorizons.semblance.Semblance"
-		},
-
-		"depends": [
-			{
-				"id": "minecraft",
-				"versions": "1.20.x"
-			},
-			{
-				"id": "quilt_loader",
-				"versions": ">=0.18.0"
-			}
-		]
 	},
-
 	"mixin": "semblance.mixins.json",
-
 	"minecraft": {
 		"environment": "dedicated_server"
 	}

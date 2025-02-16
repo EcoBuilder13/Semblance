@@ -1,33 +1,29 @@
 {
-  "schemaVersion": 1,
-  "id": "semblance",
-  "version": "${version}",
-
-  "name": "Semblance",
-  "description": "A server side mod used to rebrand your server.",
-  "authors": [
-    "EcoBuilder13"
-  ],
-  "contact": {
-    "homepage": "https://modrinth.com/mod/semblance",
-    "sources": "https://github.com/EcoBuilder13/Semblance",
-    "issues": "https://github.com/EcoBuilder13/Semblance/issues"
-  },
-
-  "license": "BSD",
-
-  "environment": "server",
-  "entrypoints": {
-    "main": [
-      "net.mchorizons.semblance.Semblance"
-    ]
-  },
-  "mixins": [
-    "semblance.mixins.json"
-  ],
-
-  "depends": {
-    "fabricloader": ">=0.14.18",
-    "minecraft": "1.20.x"
-  }
+	"schemaVersion": 1,
+	"id": "semblance",
+	"version": "${version}",
+	"name": "Semblance",
+	"description": "A server side mod used to rebrand your server.",
+	"authors": [
+		"EcoBuilder13"
+	],
+	"contact": {
+		"homepage": "https://modrinth.com/mod/semblance",
+		"sources": "https://github.com/EcoBuilder13/Semblance",
+		"issues": "https://github.com/EcoBuilder13/Semblance/issues"
+	},
+	"license": "BSD-3-Clause",
+	"environment": "server",
+	"entrypoints": {
+		"main": [
+			"net.mchorizons.semblance.Semblance"
+		]
+	},
+	"mixins": [
+		"semblance.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "1.21.x"
+	}
 }
