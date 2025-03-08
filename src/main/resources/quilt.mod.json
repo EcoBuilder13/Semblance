@@ -30,7 +30,7 @@
 				"sources": "https://github.com/EcoBuilder13/Semblance"
 			},
 			"license": "BSD-3-Clause"
-		},
+		}
 	},
 	"mixin": "semblance.mixins.json",
 	"minecraft": {
